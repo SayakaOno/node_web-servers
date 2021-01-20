@@ -34,9 +34,8 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
   res.render('help', {
     title: 'Help',
-    helpText: 'This is some helpful text.',
-    title: 'Help',
-    name: 'Sayaka Ono'
+    name: 'Sayaka Ono',
+    helpText: 'This is some helpful text.'
   });
 });
 
@@ -44,6 +43,22 @@ app.get('/weather', (req, res) => {
   res.send({
     forecast: 'Sunny',
     location: 'Vancouver'
+  });
+});
+
+app.get('/help/*', (req, res) => {
+  res.render('404', {
+    title: '404',
+    name: 'Sayaka Ono',
+    errorMessage: 'Help article not found'
+  });
+});
+
+app.get('*', (req, res) => {
+  res.render('404', {
+    title: '404',
+    name: 'Sayaka Ono',
+    errorMessage: 'My 404 page'
   });
 });
 
