@@ -41,4 +41,15 @@ footer {
   width: 250px;
 }
 
-/* I am not trying to add any additional space above or below. */
+input {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+button {
+  cursor: pointer;
+  border: solid 1px #888;
+  background: #888;
+  color: #fff;
+  padding: 8px;
+}
